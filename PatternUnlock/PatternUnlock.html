@@ -8,23 +8,70 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="\node_modules\animejs\lib\anime.min.js"></script>
     <script src="PatternUnlock.js"></script>
+    <!-- <script src="Darkmode.js"></script> -->
 
     <link rel="stylesheet" href="PatternUnlock.css">
 </head>
 <body>
-
-    <div class="pattern-demo">
-        <div class="pattern-wrapper">
-            <svg id="demo-svg" width="200px" height="200px">
-                <path id="demo-path" fill="none" stroke="#000" stroke-width="5px" d=""></path>
-            </svg>
-        </div>
-
-        <div class="input-wrapper">
-            <input id="user-in" type="text" placeholder="Pattern Code">
-        </div>
+    
+    <div class="wrapper">
+        <header>
+            <h1>Pattern Unlock Animations</h1>
+            <h3>ft. Anime.js</h3>
+        </header>
         
+        <div class="center">
+            <div class="pattern-demo">
+                <div class="pattern-wrapper" id="input-pattern-wrapper">
+                    <div class="dots" id="input-dots">
+                    </div>
+        
+                    <svg id="demo-in-svg" width="200px" height="200px">
+                        <path id="demo-in-path" fill="none" stroke="#000" stroke-width="5px" d=""></path>
+                    </svg>
+                </div>
+            </div>
+        
+            <div class="pattern-demo">
+                <div class="pattern-wrapper">
+                    <div class="dots">
+                        <div class="outer-dot">
+                            <div class="inner-dot"></div>
+                        </div>
+                        <div class="outer-dot">
+                            <div class="inner-dot"></div>
+                        </div>
+                        <div class="outer-dot">
+                            <div class="inner-dot"></div>
+                        </div>
+                        <div class="outer-dot">
+                            <div class="inner-dot"></div>
+                        </div>
+                        <div class="outer-dot">
+                            <div class="inner-dot"></div>
+                        </div>
+                        <div class="outer-dot">
+                            <div class="inner-dot"></div>
+                        </div>
+                        <div class="outer-dot">
+                            <div class="inner-dot"></div>
+                        </div>
+                        <div class="outer-dot">
+                            <div class="inner-dot"></div>
+                        </div>
+                        <div class="outer-dot">
+                            <div class="inner-dot"></div>
+                        </div>
+                    </div>
+        
+                    <svg id="demo-svg" width="200px" height="200px">
+                        <path id="demo-path" fill="none" stroke="#000" stroke-width="5px" d=""></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
     </div>
+    
 
 </body>
 </html>
