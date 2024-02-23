@@ -1,6 +1,29 @@
 body {
     /* background-color: #2F4858; */
     /* background-color: black; */
+    padding: 0;
+    margin: 0;
+}
+
+#color-changer {
+    margin: 0;
+    padding: 0;
+    width: calc(100vw);
+    height: calc(100vh);
+
+    position: absolute;
+
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+}
+
+.tile {
+    /* outline: 1px solid green; */
+}
+
+.tile:hover {
+    border: 2px solid rgb(53, 23, 75);
 }
 
 header {
@@ -8,16 +31,8 @@ header {
     color: black;
     position: absolute;
     top: 15vh;
-    left: 20vw;
+    left: calc(50% - 20vw);
     transform: rotate(-15deg);
-    > h1 {
-        font-size: 2vw;
-    }
-
-    > h3 {
-        font-size: 1vw;
-    }
-    
 }
 
 .center {
@@ -40,15 +55,10 @@ header {
     border-radius: 5px;
     padding: 40px;
     margin: 30px;
+    margin-bottom: 0;
 }
 
 svg {
-    /* outline: 3px solid red; */
-    /* margin: 3px; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* z-index: 5; */
     overflow: visible;
 }
 
@@ -57,6 +67,14 @@ svg {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 10vh;
+    margin-bottom: 0;
+}
+
+.text {
+    z-index: 5;
+    pointer-events: none;
+    /* text-decoration: underline; */
 }
 
 .input-wrapper {
@@ -108,4 +126,13 @@ input:hover {
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     z-index: 5;
+}
+
+@media(max-width:1400px) {
+    header {
+        transform: rotate(0deg);
+        text-align: center;
+
+        left: 50%;
+    }
 }

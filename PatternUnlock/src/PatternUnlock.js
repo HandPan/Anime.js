@@ -1,3 +1,6 @@
+import anime from "animejs";
+import $ from 'jquery';
+
 let drawing = false;
 $(document).ready(function () {
     // buildPattern('15436789');
@@ -68,7 +71,7 @@ $(document).ready(function () {
                 path += posLookup[dot.data('index')+1] + 'L';
                 const offset = $('#input-dots').offset();
                 $('#input-pattern-wrapper').on('mousemove', ((event) => {
-                    shortPath = path + (Math.round(event.pageX-offset.left)) + ',' + (Math.round(event.pageY-offset.top));
+                    let shortPath = path + (Math.round(event.pageX-offset.left)) + ',' + (Math.round(event.pageY-offset.top));
                     if (drawingSVG) {
                         document.getElementById('demo-in-path').setAttribute('d', shortPath);
                     }

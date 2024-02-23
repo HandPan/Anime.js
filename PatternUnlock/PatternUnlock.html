@@ -4,23 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pattern Unlock Demo</title>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="\node_modules\animejs\lib\anime.min.js"></script>
-    <script src="PatternUnlock.js"></script>
-    <!-- <script src="Darkmode.js"></script> -->
+    
+    <script src="dist/patternJS.bundle.js"></script>
+    <script src="dist/darkModeJS.bundle.js"></script>
 
     <link rel="stylesheet" href="PatternUnlock.css">
 </head>
 <body>
     
-    <div class="wrapper">
+    <div id="wrapper">
+        <div id="color-changer"></div>
+
         <header>
-            <h1>Pattern Unlock Animations</h1>
-            <h3>ft. Anime.js</h3>
+            <div class="text" style="position: relative; left: -50%;">
+                <h1>Pattern Unlock Animations</h1>
+                <h3>& Custom Dark/Light Mode</h3>
+            </div>
         </header>
         
         <div class="center">
+            <div class="text">
+                <h1>In</h1>
+            </div>
             <div class="pattern-demo">
                 <div class="pattern-wrapper" id="input-pattern-wrapper">
                     <div class="dots" id="input-dots">
@@ -29,7 +34,9 @@
                     <svg id="demo-in-svg" width="200px" height="200px">
                         <path id="demo-in-path" fill="none" stroke="#000" stroke-width="5px" d=""></path>
                     </svg>
+
                 </div>
+                
             </div>
         
             <div class="pattern-demo">
@@ -68,6 +75,10 @@
                         <path id="demo-path" fill="none" stroke="#000" stroke-width="5px" d=""></path>
                     </svg>
                 </div>
+                
+            </div>
+            <div class="text">
+                <h1>Out</h1>
             </div>
         </div>
     </div>
