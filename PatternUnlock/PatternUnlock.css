@@ -33,6 +33,7 @@ header {
     top: 15vh;
     left: calc(50% - 20vw);
     transform: rotate(-15deg);
+    pointer-events: none;
 }
 
 .center {
